@@ -1,0 +1,34 @@
+<template>     
+    <lightning-card title="All Objects And Its Related Record">
+        <div class="maindiv">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-combobox
+                     name="objectType"
+                     onchange={onObjectTypeChange}
+                     options={objectTypeList}
+                     placeholder="Object Type">
+                     </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                  <lightning-combobox
+                     name="objectList"
+                     options={objectList} 
+                     onchange={handleObjectChange} 
+                     value={selectedObject}>
+                     placeholder="Select Object">
+                   </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                </br>
+                    <lightning-button label="Create New Record"
+                     name="Create New Record" 
+                     variant="Brand"
+                     onclick={recordCreate}>
+                    </lightning-button>
+                </div>
+             </div>
+        </div>
+        </lightning-card>
+       
+</template>

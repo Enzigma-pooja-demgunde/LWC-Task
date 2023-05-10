@@ -1,0 +1,9 @@
+.maindiv{
+    background-color: beige;
+}
+.all-objects-and-its-related-record lightning-card{
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}

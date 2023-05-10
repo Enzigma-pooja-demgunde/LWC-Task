@@ -1,0 +1,26 @@
+<template>
+    <c-get-all-object selected-object={selectedObject} onobjectchange={handleObjectChange}></c-get-all-object>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-12  slds-scrollable_y " style="height:30rem;">
+          <lightning-card >
+              <div class="slds-card">
+          <lightning-checkbox-group class="slds-m-left_large"
+            name="SelectFields"
+            label="Select Fields"
+            options={lstFields}
+            value={lstFields}
+            onchange={handleCheckBoxClick} >
+         </lightning-checkbox-group>
+
+      </div>
+         </lightning-card>
+  </div>
+  <template if:true={showData}>
+    <c-fetch-all-records
+        selected-object={selectedObject}
+        array-to-send={arrayToSend}></c-fetch-all-records>
+  
+  </template>
+  </div>
+  
+</template>

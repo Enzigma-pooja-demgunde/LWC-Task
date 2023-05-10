@@ -1,0 +1,17 @@
+<template>
+selected object=
+<div class="slds-col slds-size_9-of-12  slds-scrollable_y" style="height:20rem;" >
+<lightning-datatable
+        key-field="id"      
+        columns={columnsMap} 
+        data = {allRecordsOfSelectedObject}
+        show-row-number-column="true"
+        hide-checkbox-column
+        onrowaction={handleEditAndViewAction}
+        row-actions={action} >
+  </lightning-datatable>
+ </div>
+ <div if:true={showButton}>
+    <lightning-button label="Show Data" name="ShowData" variant="Brand" style="margin-top: 15px;" onclick={handleShowData}></lightning-button>
+</div>
+</template>
